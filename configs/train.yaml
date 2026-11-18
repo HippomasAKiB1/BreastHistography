@@ -1,0 +1,27 @@
+# Training Hyperparameters: MAGNET Architecture
+training:
+  epochs: 50
+  batch_size: 4
+  gradient_accumulation_steps: 4 # effective batch size = 16
+  num_workers: 0 # Windows safe (prevents multiprocessing deadlock)
+  seed: 42
+  early_stopping_patience: 12
+  amp: true # Mixed precision
+
+optimizer:
+  type: "AdamW"
+  lr: 0.0001
+  backbone_lr: 0.00001
+  weight_decay: 0.00001
+
+scheduler:
+  type: "CosineAnnealingLR"
+  T_max: 50
+  eta_min: 0.000001
+
+loss_weights:
+  alpha_binary: 1.0
+  beta_subtype: 0.5
+  gamma_auxiliary: 0.3
+  delta_uncertainty: 0.05
+  label_smoothing: 0.05

@@ -1,0 +1,33 @@
+# Dataset Configuration: BreaKHis & Preprocessing
+dataset:
+  name: "BreaKHis_v1"
+  data_root: "data/BreaKHis_v1/BreaKHis_v1/histology_slides/breast"
+  magnifications: ["40X", "100X", "200X", "400X"]
+  image_size: 224
+  stain_normalization: "macenko"
+  
+classes:
+  binary:
+    0: "Benign"
+    1: "Malignant"
+  subtypes:
+    0: "adenosis"
+    1: "fibroadenoma"
+    2: "phyllodes_tumor"
+    3: "tubular_adenoma"
+    4: "ductal_carcinoma"
+    5: "lobular_carcinoma"
+    6: "mucinous_carcinoma"
+    7: "papillary_carcinoma"
+
+split:
+  strategy: "patient_stratified"
+  seed: 42
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  n_folds: 5
+
+normalization:
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]

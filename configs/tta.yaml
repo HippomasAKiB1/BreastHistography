@@ -1,0 +1,34 @@
+# Test-Time Adaptation Configuration: TENT, CORAL, & HAT-MIL
+methods:
+  tent:
+    name: "TENT"
+    target_params: ["norm", "bn"] # affine normalization parameters
+    optimizer: "Adam"
+    lr: 0.0001
+    steps_per_bag: 3
+    loss: "entropy_minimization"
+    temperature: 1.0
+
+  coral:
+    name: "DeepCORAL"
+    target_params: ["norm", "bn"]
+    optimizer: "Adam"
+    lr: 0.0001
+    steps_per_bag: 3
+    loss: "covariance_alignment"
+
+  hat_mil:
+    name: "HAT-MIL"
+    target_params: ["norm", "bn", "binary_head"]
+    optimizer: "Adam"
+    lr: 0.0001
+    steps_per_bag: 3
+    margin_threshold: 0.5
+    margin_clip_min: 0.1
+    diversity_weight: 0.1
+    loss: "confidence_weighted_entropy_and_diversity"
+
+evaluation:
+  batch_size: 1 # bag-level adaptation during inference
+  stain_norm: true
+  num_repeats: 5

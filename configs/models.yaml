@@ -1,0 +1,53 @@
+# Model Architecture Configuration: MAGNET & Baselines
+model:
+  name: "MAGNET"
+  feature_dim: 512
+  num_binary_classes: 2
+  num_subtype_classes: 8
+  
+backbones:
+  40X:
+    name: "mobilenetv3_large_100"
+    in_dim: 1280
+    pretrained: true
+  100X:
+    name: "efficientnet_b0"
+    in_dim: 1280
+    pretrained: true
+  200X:
+    name: "resnet34"
+    in_dim: 512
+    pretrained: true
+  400X:
+    name: "mobilenetv3_small_100"
+    in_dim: 1024
+    pretrained: true
+
+fusion:
+  type: "CrossMagAttention"
+  feat_dim: 512
+  num_heads: 8
+  dropout: 0.1
+  ffn_dim: 1024
+
+graph:
+  enabled: true
+  type: "BatchGraphNet"
+  feat_dim: 512
+  hidden_dim: 256
+  num_layers: 2
+  sim_threshold: 0.5
+  dropout: 0.1
+
+heads:
+  binary:
+    hidden_dim: 256
+    dropout: 0.4
+  subtype:
+    hidden_dim: 256
+    dropout: 0.4
+  uncertainty:
+    hidden_dim: 128
+    dropout: 0.5
+  auxiliary:
+    enabled: true

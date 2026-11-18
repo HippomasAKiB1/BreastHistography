@@ -1,0 +1,77 @@
+flowchart LR
+
+%% ====== Source Domain ======
+
+subgraph SD["SOURCE DOMAIN (BACH Dataset)"]
+direction LR
+
+A["🔬 Histopathology Images"]
+
+B["🧩 Patch Extraction
+
+• 256×256 patches
+• Stride = 128
+• Max 32 patches"]
+
+C["🧠 Feature Encoder
+
+• ResNet-50 (2048D)
+• UNI (1024D)"]
+
+D["📦 MIL Aggregator
+
+• AB-MIL
+• CLAM-SB
+• TransMIL"]
+
+E["⚙️ Source Training
+
+• 5-Fold CV
+• AdamW
+• Label Smoothing"]
+
+A --> B --> C --> D --> E
+
+end
+
+%% ====== Target Domain ======
+
+subgraph TD["TARGET DOMAIN (BreakHis)"]
+direction LR
+
+F["🧪 BreakHis Dataset"]
+
+G["🔄 Test-Time Adaptation
+
+• TENT
+• TTT
+• CORAL
+• Hybrid"]
+
+H["📈 Prediction & Evaluation
+
+• Accuracy
+• Macro-F1
+• AUROC"]
+
+F --> G --> H
+
+end
+
+E --> F
+
+
+style SD fill:#EEF4FF,stroke:#2563EB,stroke-width:3px,color:#111827
+style TD fill:#FEF2F2,stroke:#DC2626,stroke-width:3px,color:#111827
+
+style A fill:#DBEAFE,stroke:#1D4ED8,stroke-width:2px
+style B fill:#D1FAE5,stroke:#059669,stroke-width:2px
+style C fill:#E9D5FF,stroke:#7C3AED,stroke-width:2px
+style D fill:#FED7AA,stroke:#EA580C,stroke-width:2px
+style E fill:#E0E7FF,stroke:#4338CA,stroke-width:2px
+
+style F fill:#FECACA,stroke:#DC2626,stroke-width:2px
+style G fill:#FDE68A,stroke:#D97706,stroke-width:2px
+style H fill:#BBF7D0,stroke:#16A34A,stroke-width:2px
+
+linkStyle default stroke:#475569,stroke-width:3px

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you utilize BreastHistography, the MAGNET architecture, or the HAT-MIL adaptation framework in your research, please cite our paper and repository."
+title: "BreastHistography: Multi-Scale Attention-based Graph Networks & Head-Aware Test-Time Adaptation for Breast Cancer Histopathology"
+authors:
+  - family-names: "Pyil"
+    given-names: "Akib Hasan"
+    affiliation: "American International University-Bangladesh (AIUB)"
+    orcid: "https://orcid.org/0009-0000-0000-0000"
+  - family-names: "Uddin"
+    given-names: "Mohammad Rabib"
+    affiliation: "American International University-Bangladesh (AIUB)"
+date-released: 2026-11-18
+version: "1.0.0"
+repository-code: "https://github.com/HippomasAKiB1/BreastHistography"
+keywords:
+  - "breast-cancer"
+  - "histopathology"
+  - "multi-magnification"
+  - "graph-neural-networks"
+  - "attention-mechanism"
+  - "test-time-adaptation"
+  - "deep-learning"
+  - "computer-vision"
+license: "MIT"
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "Pyil"
+      given-names: "Akib Hasan"
+    - family-names: "Uddin"
+      given-names: "Mohammad Rabib"
+  title: "Multi-Scale Attention-based Graph Networks with Head-Aware Test-Time Adaptation for Breast Cancer Histopathology"
+  conference:
+    name: "IEEE Engineering in Medicine and Biology Society (EMBC)"
+  year: 2027

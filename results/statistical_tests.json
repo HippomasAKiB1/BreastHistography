@@ -1,0 +1,20 @@
+{
+  "vs_baselines": {
+    "resnet34@40X": {
+      "p_value": 0.453125,
+      "significant": false
+    },
+    "efficientnet_b0@40X": {
+      "p_value": 0.453125,
+      "significant": false
+    },
+    "mobilenetv3_large_100@40X": {
+      "p_value": 0.125,
+      "significant": false
+    },
+    "resnet34@200X": {
+      "p_value": 0.453125,
+      "significant": false
+    }
+  }
+}

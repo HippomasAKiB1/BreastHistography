@@ -1,0 +1,37 @@
+# Large files & datasets (BreaKHis)
+data/
+data/*
+*.tar.gz
+*.zip
+
+# PyTorch checkpoints (>100MB)
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Python / PyTest cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Confidential Reviewer Feedback
+Conference Management Toolkit - View review.pdf
+
+# IDE & OS files
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/

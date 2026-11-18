@@ -1,0 +1,26 @@
+{
+  "ResNet-34 @ 40X": {
+    "accuracy": 0.5385,
+    "auroc": 0.5714,
+    "f1": 0.35,
+    "ece": 0.0158
+  },
+  "ResNet-34 @ 200X": {
+    "accuracy": 0.5385,
+    "auroc": 0.6429,
+    "f1": 0.35,
+    "ece": 0.0226
+  },
+  "EfficientNet-B0 @ 40X": {
+    "accuracy": 0.6923,
+    "auroc": 0.6905,
+    "f1": 0.675,
+    "ece": 0.2115
+  },
+  "MobileNetV3-Large @ 40X": {
+    "accuracy": 0.6154,
+    "auroc": 0.6905,
+    "f1": 0.5752,
+    "ece": 0.3371
+  }
+}

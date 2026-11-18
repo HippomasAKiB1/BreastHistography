@@ -1,0 +1,10 @@
+\begin{table}[h]\centering
+\caption{Ablation study on MAGNET components.}
+\begin{tabular}{lccc}\hline
+Configuration & Accuracy & AUC-ROC & F1 \\\hline
+MAGNET (full) & \textbf{0.7692} & \textbf{0.8333} & 0.7692 \\
+w/o GNN & 0.6923 & 0.6905 & 0.6886 \\
+w/o Aux & 0.6923 & 0.7857 & 0.6923 \\
+w/o Attn & 0.5385 & 0.4048 & 0.5038 \\
+w/o GNN+Aux+Attn & 0.4615 & 0.5952 & 0.4193 \\
+\hline\end{tabular}\label{tab:ablation}\end{table}

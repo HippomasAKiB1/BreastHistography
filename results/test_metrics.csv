@@ -1,0 +1,2 @@
+n_patients,accuracy,auc_roc,f1,precision,recall,subtype_acc
+13,0.7692,0.8333,0.7692,0.7784,0.7692,0.5385

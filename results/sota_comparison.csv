@@ -1,0 +1,7 @@
+Method,Acc,Split,Notes
+Spanhol et al. 2016 [CNN],0.805,image-level,Single mag
+Han et al. 2017 [CNN+Transfer],0.88,image-level,Multi-task
+Alom et al. 2019 [IRRCNN],0.905,image-level,Recurrent CNN
+Shu et al. 2020 [Multi-mag CNN],0.91,image-level,Multi-mag
+Zhu et al. 2021 [GNN],0.87,patient-level,Graph-based
+"MAGNET (ours, CV mean±CI)",0.6375,patient-level,"±0.1950 (95% CI, 5-fold)"

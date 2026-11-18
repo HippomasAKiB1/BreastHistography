@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\caption{Comparison with baseline models on BreakHis (patient-wise split).}
+\begin{tabular}{lcc}
+\hline
+Method & Accuracy & AUC-ROC \\
+\hline
+  resnet34@40X & 0.5385 & 0.2381 \\
+  efficientnet_b0@40X & 0.6154 & 0.6190 \\
+  mobilenetv3_large_100@40X & 0.5385 & 0.5952 \\
+  resnet34@200X & 0.5385 & 0.4048 \\
+  MAGNET (ours) & \textbf{0.6923} & \textbf{0.6667} \\
+\hline
+\end{tabular}
+\label{tab:comparison}
+\end{table}

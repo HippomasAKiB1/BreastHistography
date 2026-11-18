@@ -1,0 +1,43 @@
+{
+  "n_folds": 5,
+  "n_patients": 82,
+  "binary_acc": {
+    "mean": 0.6375,
+    "ci95": 0.195
+  },
+  "auc_roc": {
+    "mean": 0.6925,
+    "ci95": 0.11
+  },
+  "f1_weighted": {
+    "mean": 0.6447,
+    "ci95": 0.1846
+  },
+  "precision": {
+    "mean": 0.7464,
+    "ci95": 0.1602
+  },
+  "recall": {
+    "mean": 0.6375,
+    "ci95": 0.195
+  },
+  "subtype_acc": {
+    "mean": 0.3926,
+    "ci95": 0.2286
+  },
+  "best_baseline_cv": {
+    "model": "efficientnet_b0@40X",
+    "binary_acc": {
+      "mean": 0.6221,
+      "ci95": 0.1344
+    },
+    "auc_roc": {
+      "mean": 0.6368,
+      "ci95": 0.1174
+    },
+    "f1_weighted": {
+      "mean": 0.6071,
+      "ci95": 0.1514
+    }
+  }
+}
